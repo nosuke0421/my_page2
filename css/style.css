@@ -1,0 +1,938 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/*リセットスタイルここまで*/
+
+body{
+	width:100%;
+  font-family: 'Sawarabi Mincho', sans-serif;
+}
+
+/*ヘッダー*/
+header{
+	width:100%;
+	max-width: 100%;
+  background-color: white;
+	top:0;
+	position: fixed;
+  height:100px;
+  z-index: 1;
+	line-height: 70px;
+}
+
+.header-left,.header-right{
+  height:70px;
+  margin:15px;
+}
+
+.header-left{
+  float:left;
+  text-decoration: none;
+  color:black;
+	font-size:32px;
+}
+
+.header-left img{
+  width:60px;
+  height:60px;
+  margin:0 30px 0 0;
+  float:left
+}
+
+.header-left p{
+  line-height:70px;
+  margin:0 15px;
+  float:left;
+}
+
+.header-right{
+  float:right;
+	font-size:18px;
+}
+
+nav ul{
+    list-style: none;
+    height:70px
+}
+
+nav li{
+  float:left;
+  margin:0 30px 0 30px;
+  width:150px;
+  text-align: center;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+nav li a{
+  text-decoration: none;
+  color:black;
+	display:block;
+
+}
+
+nav li:hover{
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
+.menu img{
+	height:40px;
+}
+
+.menu{
+	display: none;
+	cursor:pointer;
+}
+
+.humb-menu{
+	height:100%;
+	width:100%;
+	display:flex;
+}
+
+#open{
+	width:100%;
+	height:100vh;
+	position: fixed;
+	z-index:10;
+	top:0;
+	display:none;
+}
+
+.close{
+	width:60%;
+	background-color:rgba(0,0,0,0.3);
+}
+
+.humb-menu ul{
+	display: flex;
+	flex-direction: column;
+	width:40%;
+	background-color: black;
+	padding-top: 50px;
+}
+
+.humb-menu li{
+	text-align: center;
+}
+
+.humb-menu a{
+	line-height: 50px;
+	color:white;
+	text-decoration: none;
+	font-size: 14px;
+	display: block;
+	width:100%;
+	height:100%;
+	opacity: 1.0s;
+	background-color: rgba(255,255,255,0);
+	transition: background-color 1s;
+}
+
+.humb-menu a:hover{
+	background-color: rgba(255,255,255,0.2);
+	transition: background-color 1s;
+}
+
+
+/*メインコンテンツ*/
+
+.content_head{
+  font-size:54px;
+  margin: 100px 0;
+  padding-left: 50px;
+  width:400px;
+  border-bottom: 5px solid black;
+  line-height: 70px;
+}
+
+.content_head2{
+  font-size:48px;
+  margin-left: 100px;
+  margin-bottom:50px;
+  margin-top:100px;
+  line-height: 70px;
+  border-bottom:solid 2px black;
+}
+
+.main_content{
+  width:100%;
+}
+
+/*ヒーロー部*/
+.hero{
+  height:100vh;
+  width:100%;
+}
+
+.hero_title{
+  height:25vh;
+	line-height: 100px;
+	padding-top: 25vh;
+}
+
+.hero_title h1{
+  font-size:100px;
+	margin:0 5%;
+}
+
+.hero_title h2{
+  font-size:50px;
+	margin:0 5%;
+}
+
+.hero_image{
+  height:50vh;
+  background-image: url("../images/hero.jpg");
+  background-repeat: no-repeat;
+  background-position:center;
+  background-size: cover;
+}
+
+/*my_base*/
+.my_base{
+  margin-bottom:100px;
+  width:100%;
+}
+
+.skills{
+  width:90%;
+  height:700px;
+  display:flex;
+  margin:50px auto;
+}
+
+.skill{
+  width:30%;
+  text-align: center;
+  margin:0 auto;
+}
+
+.skill h3{
+  font-size: 32px;
+  color:white;
+  background-color: black;
+  height:300px;
+  width:300px;
+  margin:20px auto;
+  line-height: 300px;
+  border-radius: 150px;
+}
+
+.message{
+	font-size: 24px;
+	line-height: 50px;
+}
+
+.skill_messasge{
+  width:90%;
+  text-align: left;
+  margin:auto;
+}
+
+.skill_messasge p{
+  margin:10px 0;
+}
+
+.my_base_message{
+  margin-left: 150px;
+  margin-bottom:100px;
+}
+
+.challenge_list{
+	margin:20px auto;
+	width:90%;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+	font-size: 24px;
+	line-height: 50px;
+}
+
+.challenge_list li{
+  display: block;
+  margin:10px 10px;
+  padding:0 10px;
+  border-radius: 10px;
+  border:2px solid black;
+}
+
+/*実績*/
+.reslut_content{
+  margin-left: 10%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.reslut_content img{
+  width:40%;
+  margin:10px auto;
+}
+
+.performance_message{
+  width:50%;
+	margin:auto;
+}
+
+/*faq*/
+.question{
+  margin-left:10%;
+  margin-top:30px;
+  height:100px;
+  width:80%;
+  cursor: pointer;
+}
+
+.question p{
+  border-left:5px solid black;
+  border-bottom: 2px solid black;
+  padding-left:10%;
+  position: relative;
+}
+.question span{
+  position:absolute;
+	left:98%;
+}
+
+.answer{
+  margin-left: 10%;
+  margin-top:10px;
+		padding-left: 5%;
+  border-bottom: 2px solid black;
+  display: none;
+}
+
+/*コンタクト*/
+.contact_message{
+  text-align: center;
+	width:80%;
+	margin:0 auto;
+}
+
+.contact_btn{
+  display: block;
+  text-align: center;
+  width:600px;
+  margin:100px auto;
+  color:white;
+  text-decoration: none;
+  background-color: black;
+  line-height: 40px;
+  font-size:32px;
+  padding:20px;
+  border-radius: 50px;
+  opacity: 0.8;
+  cursor: pointer;
+  transition: opacity 1s;
+}
+
+.contact_btn:hover{
+  opacity: 1.0;
+  transition:opacity 1s;
+}
+
+/*フッター*/
+footer{
+  width:100%;
+  height:100px;
+  text-align:center;
+  background-color:black;
+  margin-top:100px;
+	display:flex;
+}
+
+.rights{
+	width: 66%;
+	margin: auto;
+	display: flex;
+}
+
+footer a{
+	height:50px;
+	margin: auto;
+}
+
+footer img{
+	height:50px;
+	width:50px;
+	margin: auto;
+}
+
+footer p{
+  line-height: 100px;
+  font-size:14px;
+  color:white;
+  text-align: center;
+  margin:0 auto;
+}
+
+footer a{
+  color:white;
+  text-decoration: none;
+}
+
+/*ポートフォリオ*/
+
+/*ポートフォリオ*/
+.portfolios {
+  width: 90%;
+  display: flex;
+  margin: 50px auto;
+  flex-wrap: wrap;
+}
+
+.portfolio {
+  width: 40%;
+  margin: 20px auto;
+}
+
+.portfolio img {
+  width: 100%;
+  margin:30px auto;
+	border:1px solid black;
+}
+
+.portfolio_head {
+  font-size: 32px;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 20px;
+	height:100px;
+}
+
+.portfolio_message {
+
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  height: 150px;
+  width: 100%;
+}
+
+.portfolio_skill {
+  height: 250px;
+}
+
+.portfolio_skill p, .portfolio_system p {
+  font-size: 20px;
+  border-bottom: 1px solid;
+  padding-left: 50px;
+  width: 25%;
+  margin-top: 10px;
+  line-height: 40px;
+}
+
+.portfolio_skill ul, .portfolio_system ul {
+  display: flex;
+  margin: 30px auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.portfolio_skill li, .portfolio_system li {
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+  padding: 10px 30px;
+  margin: 10px 10px;
+  letter-spacing: 2px;
+}
+
+.practice{
+    margin-left: 10%;
+}
+.practice_list{
+  margin:50px auto;
+  line-height: 60px;
+}
+
+.practice_list p{
+  position:relative;
+}
+
+.practice_list a{
+  position: absolute;
+  left:40%;
+  text-align: left;
+}
+/*ポートフォリオここまで*/
+
+/*ブログ運営*/
+.description{
+	width:90%;
+	margin:50px auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.blog_link{
+	display:block;
+	margin:50px auto;
+	border: 1px solid black;
+	width:30%;
+	overflow: hidden;
+}
+
+.blog_link img{
+	width:100%;
+	margin:0;
+	transition: all 0.3s;
+}
+
+.blog_link img:hover{
+	transform:scale(1.2);
+
+	transition: all 0.3s;
+}
+
+.blog_message{
+	margin:auto;
+	font-size: 20px;
+}
+
+.blog_title{
+	font-size: 52px;
+	line-height: 90px;
+}
+
+.blog_info_list{
+	display: flex;
+	flex-wrap: wrap;
+	margin:auto;
+	text-align: center;
+	width:90%;
+}
+
+.blog_info_list li{
+	width:600px;
+	margin:20px auto;
+	padding-bottom: 10px;
+	border-bottom: 2px solid black;
+	border-left:1px solid black;
+}
+
+.work{
+	width:90%;
+	margin: auto;
+}
+
+/*経歴*/
+
+.his_message{
+	margin: auto 5%;
+}
+
+.history{
+	max-width: 90%;
+	margin:0 auto;
+}
+
+.history table{
+	font-size:16px;
+	line-height: 40px;
+	margin:30px auto;
+	border:1px solid black;
+	min-width:70%;
+	max-width:900px;
+}
+
+.history table p{
+	padding-left: 10%;
+}
+
+.history table tr:nth-child(odd){
+  background-color:#D6D4D2;
+}
+
+.grade{
+	width:30%;
+	border-right: 1px solid black;
+}
+
+/*
+
+/*レスポンシブ*/
+@media(max-width:1430px){
+
+	.header-right,.header-left{
+		margin:10px;
+	}
+
+	.header-left img{
+		margin:0 10px 0 0;
+	}
+
+	nav li{
+		width:150px;
+		margin:0 10px 0 10px;
+	}
+
+	.hero_title h1{
+		font-size: 80px;
+	}
+
+	.hero_title h2{
+		font-size: 60px;
+	}
+
+	.skills{
+		height:550px;
+	}
+
+	.skill h3{
+		font-size: 20px;
+		height:200px;
+		width:200px;
+		line-height: 200px;
+	}
+
+	.message{
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	.challenge_list{
+		font-size: 18px;
+		line-height: 30px;
+	}
+
+	/*ポートフォリオ*/
+	.portfolio_head {
+	  font-size: 24px;
+	  line-height: 30px;
+		height:76px;
+	}
+
+	/*ブログ運営*/
+	.blog_title{
+		font-size: 40px;
+	}
+
+	.blog_title{
+		font-size: 40px;
+		line-height: 70px;
+	}
+
+	.blog_message{
+		font-size:16px;
+	}
+	/*経歴*/
+	.history table{
+		font-size:14px;
+		line-height:36px;
+	}
+}
+
+@media(max-width:1000px){
+	.content_head{
+		font-size: 40px;
+	}
+
+	.content_head2{
+		font-size: 32px;
+	}
+
+	.header-left{
+		font-size:20px;
+	}
+
+	.header-right{
+		font-size: 14px;
+	}
+
+	nav li{
+		width:100px;
+	}
+
+	.hero_title h1{
+		font-size: 70px;
+	}
+
+	.hero_title h2{
+		font-size: 40px;
+	}
+
+	.skills{
+		flex-direction: column;
+		height:auto;
+	}
+
+	.skill{
+		width: 90%;
+		margin-bottom: 50px;
+	}
+
+	.skill h3{
+		font-size:32px;
+		height:300px;
+		width:300px;
+		line-height: 300px;
+	}
+
+	.contact_btn{
+		font-size: 20px;
+	}
+
+	/*ポートフォリオ*/
+	.portfolios{
+		flex-direction: column;
+	}
+
+	.portfolio{
+		width:80%;
+		border-bottom: 2px solid black;
+	}
+
+	.portfolio_skill{
+		height:200px;
+	}
+
+	.portfolio_system{
+		margin-bottom: 50px;
+	}
+
+	.portfolio_skill li, .portfolio_system li {
+	  font-size: 18px;
+	  line-height: 20px;
+	}
+
+	.portfolio_message{
+		height:100px;
+	}
+
+	/*ブログ運営*/
+	.tweet{
+		width:40%;
+	}
+
+	.blog_link{
+		width:70%;
+	}
+
+	.blog_title{
+		font-size: 32px;
+	}
+}
+
+@media(max-width:680px){
+
+	header{
+		height:60px;
+		line-height: 40px;
+	}
+
+	.header-left,.header-right{
+		height:40px;
+		margin:10px 10px;
+	}
+
+	.header-left img{
+		width:40px;
+		height:40px;
+		margin:0;
+	}
+
+	.header-left p{
+		line-height: 40px;
+		font-size: 18px;
+		margin:0 3px;
+	}
+
+	.content_head{
+		width:70%;
+		margin:70px 0;
+		font-size: 28px;
+	}
+
+	.content_head2{
+		margin:50px 0 50px 50px;
+		font-size: 20px;
+	}
+
+	.header-right .nav-list{
+		display: none;
+	}
+
+	.header-right .menu{
+		display: block;
+		width:40px;
+		height:40px;
+	}
+
+	.hero_title h1{
+		font-size: 24px;
+		line-height: 80px;
+	}
+
+	.hero_title h2{
+		font-size: 18px;
+	}
+
+	.skill h3{
+		width:200px;
+		height:200px;
+		line-height: 200px;
+		font-size: 20px;
+	}
+
+	.reslut_content{
+		flex-direction: column;
+	}
+
+	.reslut_content img,.performance_message{
+		width:90%;
+	}
+
+	.message{
+		font-size: 16px;
+		line-height: 24px;
+	}
+
+	.challenge_list{
+		font-size: 12px;
+		line-height: 20px;
+	}
+
+	.question{
+		height:60px;
+	}
+
+	.contact_btn{
+		font-size: 20px;
+		width:80%;
+	}
+
+	.contact_message{
+		text-align: left;
+	}
+
+	.rights{
+		flex-direction: column;
+		width:auto;
+	}
+
+	footer p{
+		font-size:8px;
+		line-height: 50px;
+		margin:auto;
+	}
+
+	footer a{
+		height:30px;
+	}
+
+	footer img{
+		height:30px;
+		width:30px;
+	}
+
+
+	/*ポートフォリオ*/
+	.portfolio_head {
+	  font-size: 18px;
+	  line-height:25px;
+		height:60px;
+	}
+
+	.portfolio_head {
+	  font-size: 24px;
+	  line-height: 30px;
+		height:76px;
+	}
+
+	.portfolio{
+		width:90%;
+		border-bottom: 2px solid black;
+	}
+
+	.portfolio_skill,.portfolio_system{
+		height:auto;
+	}
+
+	.portfolio_skill p, .portfolio_system p {
+	  font-size: 20px;
+	  border-bottom: 1px solid;
+	  padding-left: 50px;
+	  width: 60%;
+	  margin-top: 10px;
+	  line-height: 40px;
+	}
+
+	.portfolio_skill li, .portfolio_system li {
+	  font-size: 14px;
+	  line-height: 18px;
+	}
+
+	/*ブログ運営*/
+	.blog_link{
+		margin:20px auto;
+	}
+
+	.blog_title{
+		font-size: 20px;
+	}
+
+	.tweets{
+		flex-direction: column;
+	}
+
+	.tweet{
+		width:80%;
+	}
+
+	.history table{
+		font-size:12px;
+		line-height:34px;
+	}
+
+}
